@@ -1101,7 +1101,7 @@ GameObject:
   - component: {fileID: 604558105}
   - component: {fileID: 604558106}
   m_Layer: 0
-  m_Name: Slider (3)
+  m_Name: Fon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1179,19 +1179,7 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 604558106}
-        m_TargetAssemblyTypeName: MixerControler, Assembly-CSharp
-        m_MethodName: SetVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &604558106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1205,7 +1193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mixer: {fileID: 24100000, guid: 6e09092de4181ba41b8604a0da41aa20, type: 2}
-  _name: Fon
 --- !u!1 &644202540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1696,7 @@ GameObject:
   - component: {fileID: 860588034}
   - component: {fileID: 860588035}
   m_Layer: 0
-  m_Name: 'Slider '
+  m_Name: Master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1787,19 +1774,7 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 860588035}
-        m_TargetAssemblyTypeName: Mixer, Assembly-CSharp
-        m_MethodName: SetVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &860588035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1813,7 +1788,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mixer: {fileID: 24100000, guid: 6e09092de4181ba41b8604a0da41aa20, type: 2}
-  _name: Master
 --- !u!1 &912777804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,7 +2377,7 @@ GameObject:
   - component: {fileID: 1095860083}
   - component: {fileID: 1095860084}
   m_Layer: 0
-  m_Name: Slider (2)
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2481,19 +2455,7 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1095860084}
-        m_TargetAssemblyTypeName: MixerControler, Assembly-CSharp
-        m_MethodName: SetVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1095860084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2507,7 +2469,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mixer: {fileID: 24100000, guid: 6e09092de4181ba41b8604a0da41aa20, type: 2}
-  _name: UI
 --- !u!1 &1160805829
 GameObject:
   m_ObjectHideFlags: 0
@@ -3735,7 +3696,7 @@ Transform:
   m_GameObject: {fileID: 1900748299}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8696278, y: -0.2687813, z: 18742.922}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
