@@ -3,24 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class SwitchMusic : MonoBehaviour
 {
-    [SerializeField] private Slider _slider;
+    private Button _button;
 
-    private float _bufferVolume;
-    private float _minVolume = 0.0001f;
+    private float _listenerDefaultVolume;
+    private float _listenerMinVolume = 0f;
+
+    private void Awake()
+    {
+        _listenerDefaultVolume = AudioListener.volume;
+        _button = GetComponent<Button>();
+
+        _button.onClick.AddListener(SetVolume);
+    }
+
+    private void OnDisable()
+    {
+        _button.onClick.RemoveListener(SetVolume);
+    }
 
     public void SetVolume()
     {
-        if (_slider.value > _minVolume)
-        {
-            _bufferVolume = _slider.value;
+        bool isPlaying = AudioListener.volume > _listenerMinVolume ? true : false;
 
-            _slider.value = _minVolume;
-        }
-        else if (_slider.value == _minVolume)
+        if (isPlaying)
         {
-            _slider.value = _bufferVolume;
+            AudioListener.volume = _listenerMinVolume;
+        }
+        else
+        {
+            AudioListener.volume = _listenerDefaultVolume;
         }
     }
 }

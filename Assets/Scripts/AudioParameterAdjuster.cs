@@ -4,20 +4,18 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
-    [RequireComponent (typeof (Slider))]
+    [RequireComponent(typeof(Slider))]
     public class AudioParameterAdjuster : MonoBehaviour
     {
         [SerializeField] private AudioMixer _mixer;
 
-        private string _name;
-       
-        private Slider _slider;
+        [SerializeField] private string _name;
 
+        private Slider _slider;
 
         private void Awake()
         {
             _slider = GetComponent<Slider>();
-            _name = gameObject.name;
             _slider.onValueChanged.AddListener(SetVolume);
         }
 
@@ -38,7 +36,17 @@ namespace Assets.Scripts
 
         private void SetVolume(string name, float volume)
         {
-            _mixer.SetFloat(name, Mathf.Log10(volume) * 20);
+            int logMultiple = 20;
+            int minValueDB = -80;
+
+            if (volume == 0)
+            {
+                _mixer.SetFloat(name, minValueDB);
+            }
+            else
+            {
+                _mixer.SetFloat(name, Mathf.Log10(volume) * logMultiple);
+            }
         }
     }
 }
